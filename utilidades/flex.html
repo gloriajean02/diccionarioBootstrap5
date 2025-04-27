@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de Flexbox con Bootstrap</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
+    <style>
+        pre code {
+            font-size: 1rem;
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body class="p-4">
+    <a href="../index.html" class="btn btn-warning">Volver al inicio</a>
+    <br>
+    <br>
+
+    <h1>Flexbox en Bootstrap - Ejemplos básicos</h1>
+
+    <hr>
+
+    <!-- FLEX PARENT (D-FLEX) -->
+    <h2>1. Flex básico en padres</h2>
+
+    <p><strong>Sin Flex</strong> (div normal, ocupa toda la fila):</p>
+    <div class="mb-4">
+        <div class="bg-success border p-3">Elemento 1</div>
+        <div class="bg-success border p-3">Elemento 2</div>
+        <div class="bg-success border p-3">Elemento 3</div>
+        <div class="bg-success border p-3">Elemento 4</div>
+    </div>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;div class="bg-success border p-3"&gt;Elemento 1&lt;/div&gt;
+&lt;div class="bg-success border p-3"&gt;Elemento 2&lt;/div&gt;
+&lt;div class="bg-success border p-3"&gt;Elemento 3&lt;/div&gt;
+&lt;div class="bg-success border p-3"&gt;Elemento 4&lt;/div&gt;</code></pre>
+    </div>
+
+    <br>
+
+    <p><strong>Con Flex (d-flex)</strong> (los elementos se ajustan al contenido horizontalmente):</p>
+    <div class="d-flex mb-4">
+        <div class="bg-success border p-3">Elemento 1</div>
+        <div class="bg-success border p-3">Elemento 2</div>
+        <div class="bg-success border p-3">Elemento 3</div>
+        <div class="bg-success border p-3">Elemento 4</div>
+    </div>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;div class="d-flex"&gt;
+    &lt;div class="bg-success border p-3"&gt;Elemento 1&lt;/div&gt;
+    &lt;div class="bg-success border p-3"&gt;Elemento 2&lt;/div&gt;
+    &lt;div class="bg-success border p-3"&gt;Elemento 3&lt;/div&gt;
+    &lt;div class="bg-success border p-3"&gt;Elemento 4&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <br>
+
+    <!-- FLEX DIRECCIONES -->
+    <h2>2. Direcciones de flex</h2>
+
+    <p><strong>Fila (flex-row)</strong> (por defecto desde la izquierda):</p>
+    <div class="d-flex flex-row mb-4">
+        <div class="bg-info border p-3">Fila 1</div>
+        <div class="bg-info border p-3">Fila 2</div>
+        <div class="bg-info border p-3">Fila 3</div>
+        <div class="bg-info border p-3">Fila 4</div>
+    </div>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;div class="d-flex flex-row"&gt;
+    &lt;div class="bg-info border p-3"&gt;Fila 1&lt;/div&gt;
+    &lt;div class="bg-info border p-3"&gt;Fila 2&lt;/div&gt;
+    &lt;div class="bg-info border p-3"&gt;Fila 3&lt;/div&gt;
+    &lt;div class="bg-info border p-3"&gt;Fila 4&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <br>
+
+    <p><strong>Fila inversa (flex-row-reverse)</strong> (empieza desde la derecha):</p>
+    <div class="d-flex flex-row-reverse mb-4">
+        <div class="bg-info border p-3">Fila 1</div>
+        <div class="bg-info border p-3">Fila 2</div>
+        <div class="bg-info border p-3">Fila 3</div>
+        <div class="bg-info border p-3">Fila 4</div>
+    </div>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;div class="d-flex flex-row-reverse"&gt;
+    &lt;div class="bg-info border p-3"&gt;Fila 1&lt;/div&gt;
+    &lt;div class="bg-info border p-3"&gt;Fila 2&lt;/div&gt;
+    &lt;div class="bg-info border p-3"&gt;Fila 3&lt;/div&gt;
+    &lt;div class="bg-info border p-3"&gt;Fila 4&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <br>
+
+    <p><strong>Columna (flex-column)</strong> (de arriba a abajo):</p>
+    <div class="d-flex flex-column mb-4">
+        <div class="bg-warning border p-3">Columna 1</div>
+        <div class="bg-warning border p-3">Columna 2</div>
+        <div class="bg-warning border p-3">Columna 3</div>
+        <div class="bg-warning border p-3">Columna 4</div>
+    </div>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;div class="d-flex flex-column"&gt;
+    &lt;div class="bg-warning border p-3"&gt;Columna 1&lt;/div&gt;
+    &lt;div class="bg-warning border p-3"&gt;Columna 2&lt;/div&gt;
+    &lt;div class="bg-warning border p-3"&gt;Columna 3&lt;/div&gt;
+    &lt;div class="bg-warning border p-3"&gt;Columna 4&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <br>
+
+    <p><strong>Columna inversa (flex-column-reverse)</strong> (de abajo hacia arriba):</p>
+    <div class="d-flex flex-column-reverse mb-4">
+        <div class="bg-warning border p-3">Columna 1</div>
+        <div class="bg-warning border p-3">Columna 2</div>
+        <div class="bg-warning border p-3">Columna 3</div>
+        <div class="bg-warning border p-3">Columna 4</div>
+    </div>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;div class="d-flex flex-column-reverse"&gt;
+    &lt;div class="bg-warning border p-3"&gt;Columna 1&lt;/div&gt;
+    &lt;div class="bg-warning border p-3"&gt;Columna 2&lt;/div&gt;
+    &lt;div class="bg-warning border p-3"&gt;Columna 3&lt;/div&gt;
+    &lt;div class="bg-warning border p-3"&gt;Columna 4&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <br><br>
+
+    <!-- FLEX WRAP -->
+    <h2>3. Flex-wrap</h2>
+
+    <p><strong>Sin wrap (d-flex)</strong> (todo en una línea aunque se salga):</p>
+    <div class="d-flex bg-secondary mb-4">
+        <div class="bg-success border p-3" style="width: 150px;">Caja 1</div>
+        <div class="bg-success border p-3" style="width: 150px;">Caja 2</div>
+        <div class="bg-success border p-3" style="width: 150px;">Caja 3</div>
+        <div class="bg-success border p-3" style="width: 150px;">Caja 4</div>
+        <div class="bg-success border p-3" style="width: 150px;">Caja 5</div>
+    </div>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;div class="d-flex bg-secondary"&gt;
+    &lt;div class="bg-success border p-3" style="width: 150px;"&gt;Caja 1&lt;/div&gt;
+    &lt;div class="bg-success border p-3" style="width: 150px;"&gt;Caja 2&lt;/div&gt;
+    &lt;div class="bg-success border p-3" style="width: 150px;"&gt;Caja 3&lt;/div&gt;
+    &lt;div class="bg-success border p-3" style="width: 150px;"&gt;Caja 4&lt;/div&gt;
+    &lt;div class="bg-success border p-3" style="width: 150px;"&gt;Caja 5&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <br>
+
+    <p><strong>Con wrap (flex-wrap)</strong> (baja a la siguiente línea si no cabe):</p>
+    <div class="d-flex flex-wrap bg-secondary mb-4">
+        <div class="bg-success border p-3" style="width: 150px;">Caja 1</div>
+        <div class="bg-success border p-3" style="width: 150px;">Caja 2</div>
+        <div class="bg-success border p-3" style="width: 150px;">Caja 3</div>
+        <div class="bg-success border p-3" style="width: 150px;">Caja 4</div>
+        <div class="bg-success border p-3" style="width: 150px;">Caja 5</div>
+    </div>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;div class="d-flex flex-wrap bg-secondary"&gt;
+    &lt;div class="bg-success border p-3" style="width: 150px;"&gt;Caja 1&lt;/div&gt;
+    &lt;div class="bg-success border p-3" style="width: 150px;"&gt;Caja 2&lt;/div&gt;
+    &lt;div class="bg-success border p-3" style="width: 150px;"&gt;Caja 3&lt;/div&gt;
+    &lt;div class="bg-success border p-3" style="width: 150px;"&gt;Caja 4&lt;/div&gt;
+    &lt;div class="bg-success border p-3" style="width: 150px;"&gt;Caja 5&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+    <br><br>
+    <!-- FLEX GROW / SHRINK / FILL -->
+    <h2>4. Flex Grow, Shrink y Fill</h2>
+
+    <!-- flex-grow -->
+    <p><strong>Flex Grow</strong> (el elemento crece para ocupar el espacio disponible):</p>
+    <div class="d-flex mb-4">
+        <div class="bg-primary border p-3 flex-grow-1">Grow 1</div>
+        <div class="bg-primary border p-3">Normal</div>
+        <div class="bg-primary border p-3">Normal</div>
+    </div>
+    <br>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;div class="d-flex mb-4"&gt;
+&lt;div class="bg-primary border p-3 flex-grow-1"&gt;Grow 1&lt;/div&gt;
+&lt;div class="bg-primary border p-3"&gt;Normal&lt;/div&gt;
+&lt;div class="bg-primary border p-3"&gt;Normal&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+    <br><br>
+
+    <!-- flex-shrink -->
+    <p><strong>Flex Shrink</strong> (el elemento se encoge si es necesario):</p>
+    <div class="d-flex mb-4">
+        <div class="bg-primary border p-3" style="width: 300px;">Caja grande</div>
+        <div class="bg-danger border p-3 flex-shrink-1" style="width: 300px;">Shrink</div>
+        <div class="bg-primary border p-3" style="width: 300px;">Caja grande</div>
+    </div>
+    <br>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;div class="d-flex mb-4"&gt;
+&lt;div class="bg-primary border p-3" style="width: 300px;"&gt;Caja grande&lt;/div&gt;
+&lt;div class="bg-danger border p-3 flex-shrink-1" style="width: 300px;"&gt;Shrink&lt;/div&gt;
+&lt;div class="bg-primary border p-3" style="width: 300px;"&gt;Caja grande&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+    <br><br>
+
+    <!-- flex-fill -->
+    <p><strong>Flex Fill</strong> (todos los elementos llenan el espacio disponible de manera igual):</p>
+    <div class="d-flex mb-4">
+        <div class="bg-primary border p-3 flex-fill">Fill 1</div>
+        <div class="bg-primary border p-3 flex-fill">Fill 2</div>
+        <div class="bg-primary border p-3 flex-fill">Fill 3</div>
+    </div>
+
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;div class="d-flex mb-4"&gt;
+&lt;div class="bg-primary border p-3 flex-fill"&gt;Fill 1&lt;/div&gt;
+&lt;div class="bg-primary border p-3 flex-fill"&gt;Fill 2&lt;/div&gt;
+&lt;div class="bg-primary border p-3 flex-fill"&gt;Fill 3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+    
+    <br><br>
+
+
+    <!-- ALINEACIONES -->
+    <h2>5. Alineaciones: Align Items, Align Self y Justify Content</h2>
+
+    <!-- Align Items -->
+    <h3>Align Items</h3>
+
+    <p><strong>align-items-start</strong> (arriba):</p>
+    <div class="d-flex align-items-start bg-primary-subtle" style="height: 150px;">
+        <div class="bg-success border p-3">Start</div>
+        <div class="bg-success border p-3">Start</div>
+    </div>
+    <br>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;div class="d-flex align-items-start bg-light" style="height: 150px;"&gt;
+&lt;div class="bg-success border p-3"&gt;Start&lt;/div&gt;
+&lt;div class="bg-success border p-3"&gt;Start&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+    
+    <br>
+    <p><strong>align-items-center</strong> (centrado vertical):</p>
+    <div class="d-flex align-items-center bg-primary-subtle" style="height: 150px;">
+        <div class="bg-success border p-3">Center</div>
+        <div class="bg-success border p-3">Center</div>
+    </div>
+    <br>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;div class="d-flex align-items-center bg-light" style="height: 150px;"&gt;
+&lt;div class="bg-success border p-3"&gt;Center&lt;/div&gt;
+&lt;div class="bg-success border p-3"&gt;Center&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+    
+    <br>
+    <p><strong>align-items-end</strong> (abajo):</p>
+    <div class="d-flex align-items-end bg-primary-subtle" style="height: 150px;">
+        <div class="bg-success border p-3">End</div>
+        <div class="bg-success border p-3">End</div>
+    </div>
+    <br>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;div class="d-flex align-items-end bg-light" style="height: 150px;"&gt;
+&lt;div class="bg-success border p-3"&gt;End&lt;/div&gt;
+&lt;div class="bg-success border p-3"&gt;End&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+    
+
+    <hr>
+
+    <!-- Align Self -->
+    <h3>Align Self</h3>
+    <div class="d-flex bg-primary-subtle" style="height: 150px;">
+        <div class="bg-info border p-3 align-self-start">Self Start</div>
+        <div class="bg-info border p-3 align-self-center">Self Center</div>
+        <div class="bg-info border p-3 align-self-end">Self End</div>
+    </div>
+    <br>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;div class="d-flex bg-light" style="height: 150px;"&gt;
+&lt;div class="bg-info border p-3 align-self-start"&gt;Self Start&lt;/div&gt;
+&lt;div class="bg-info border p-3 align-self-center"&gt;Self Center&lt;/div&gt;
+&lt;div class="bg-info border p-3 align-self-end"&gt;Self End&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+    
+
+    <br><br>
+
+    <!-- Justify Content -->
+    <h3>Justify Content</h3>
+
+    <p><strong>justify-content-start</strong> (alineado a la izquierda):</p>
+    <div class="d-flex justify-content-start bg-primary-subtle mb-4">
+        <div class="bg-danger border p-3">Start</div>
+        <div class="bg-danger border p-3">Start</div>
+    </div>
+    <br>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;div class="d-flex justify-content-start bg-light mb-4"&gt;
+&lt;div class="bg-danger border p-3"&gt;Start&lt;/div&gt;
+&lt;div class="bg-danger border p-3"&gt;Start&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+    <br>
+
+    <p><strong>justify-content-center</strong> (centrado horizontal):</p>
+    <div class="d-flex justify-content-center bg-primary-subtle mb-4">
+        <div class="bg-danger border p-3">Center</div>
+        <div class="bg-danger border p-3">Center</div>
+    </div>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;div class="d-flex justify-content-center bg-light mb-4"&gt;
+&lt;div class="bg-danger border p-3"&gt;Center&lt;/div&gt;
+&lt;div class="bg-danger border p-3"&gt;Center&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+    
+    <br>
+    <p><strong>justify-content-end</strong> (alineado a la derecha):</p>
+    <div class="d-flex justify-content-end bg-primary-subtle mb-4">
+        <div class="bg-danger border p-3">End</div>
+        <div class="bg-danger border p-3">End</div>
+    </div>
+
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;div class="d-flex justify-content-end bg-light mb-4"&gt;
+&lt;div class="bg-danger border p-3"&gt;End&lt;/div&gt;
+&lt;div class="bg-danger border p-3"&gt;End&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+    
+</div>
+
+
+    <br>
+    <br>
+    <a href="../index.html" class="btn btn-warning">Volver al inicio</a>
+
+    
+</body>
+
+</html>

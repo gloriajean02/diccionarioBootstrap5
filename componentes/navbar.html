@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar en Bootstrap 5</title>
+
+    <!-- Incluyendo Prism.js para resaltado de sintaxis -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+</head>
+<body class="m-5" style="background-color:rgba(123, 202, 205, 0.676)">
+    <a href="../index.html" class="btn btn-warning">Volver al inicio</a>
+    <br>
+    <br>
+
+    <h1>Navbar en Bootstrap 5</h1>
+    <hr>
+    <br>
+    <p>Este es un ejemplo de cómo utilizar el componente <code>navbar</code> de Bootstrap 5. Un <code>navbar</code> se usa para crear barras de navegación y puede incluir elementos como enlaces, formularios, botones y menús desplegables.</p>
+
+    <!-- Navbar -->
+    <div class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">Marca</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapseNavbarContent">
+                <!-- Menú de navegación -->
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">About us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Dropdown</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="dropdown-item">Opción 1</a></li>
+                            <li><a href="#" class="dropdown-item">Opción 2</a></li>
+                            <li><a href="#" class="dropdown-item">Opción 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- Formulario de búsqueda -->
+                <form action="" class="d-flex">
+                    <input type="text" class="form-control" placeholder="Buscar...">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <br><br>
+    <!-- Visualización del código -->
+    <h1>Visualización del código</h1>
+    <h3>HTML del Navbar</h3>
+    <br>
+    <div class="card text-bg-dark p-3">
+        <pre><code class="language-html">&lt;div class="navbar navbar-expand-lg bg-body-tertiary"&gt; &lt;!-- Barra de navegación con fondo terciario que se expande en pantallas grandes --&gt;
+        &lt;div class="container-fluid"&gt; &lt;!-- Contenedor fluido para la barra de navegación, asegura que ocupe todo el ancho disponible --&gt;
+            &lt;a href="#" class="navbar-brand"&gt;Marca&lt;/a&gt; &lt;!-- Enlace que actúa como marca o logo en la barra de navegación --&gt;
+    
+            &lt;button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavbarContent"&gt;
+                &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt; &lt;!-- Botón para alternar la visibilidad del menú en pantallas pequeñas --&gt;
+            &lt;/button&gt;
+    
+            &lt;div class="collapse navbar-collapse" id="collapseNavbarContent"&gt; &lt;!-- Contenedor que contiene el menú de navegación, se oculta en pantallas pequeñas y se muestra al activar el botón --&gt;
+                &lt;ul class="navbar-nav me-auto"&gt; &lt;!-- Lista de elementos de la barra de navegación alineados a la izquierda --&gt;
+                    &lt;li class="nav-item"&gt; &lt;!-- Elemento de lista de navegación para "Home" --&gt;
+                        &lt;a href="#" class="nav-link"&gt;Home&lt;/a&gt; &lt;!-- Enlace a la página principal --&gt;
+                    &lt;/li&gt;
+                    &lt;li class="nav-item"&gt; &lt;!-- Elemento de lista de navegación para "Services" --&gt;
+                        &lt;a href="#" class="nav-link"&gt;Services&lt;/a&gt; &lt;!-- Enlace a la sección de servicios --&gt;
+                    &lt;/li&gt;
+                    &lt;li class="nav-item"&gt; &lt;!-- Elemento de lista de navegación para "About us" --&gt;
+                        &lt;a href="#" class="nav-link"&gt;About us&lt;/a&gt; &lt;!-- Enlace a la sección sobre la empresa --&gt;
+                    &lt;/li&gt;
+                    &lt;li class="nav-item dropdown"&gt; &lt;!-- Elemento de lista para un menú desplegable --&gt;
+                        &lt;a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"&gt;Dropdown&lt;/a&gt; &lt;!-- Enlace que activa el menú desplegable --&gt;
+                        &lt;ul class="dropdown-menu"&gt; &lt;!-- Menú desplegable con opciones --&gt;
+                            &lt;li&gt;&lt;a href="#" class="dropdown-item"&gt;Opción 1&lt;/a&gt;&lt;/li&gt; &lt;!-- Primer elemento del menú desplegable --&gt;
+                            &lt;li&gt;&lt;a href="#" class="dropdown-item"&gt;Opción 2&lt;/a&gt;&lt;/li&gt; &lt;!-- Segundo elemento del menú desplegable --&gt;
+                            &lt;li&gt;&lt;a href="#" class="dropdown-item"&gt;Opción 3&lt;/a&gt;&lt;/li&gt; &lt;!-- Tercer elemento del menú desplegable --&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;form action="" class="d-flex"&gt; &lt;!-- Formulario para la barra de búsqueda --&gt;
+                    &lt;input type="text" class="form-control" placeholder="Buscar..."&gt; &lt;!-- Campo de texto para ingresar lo que se desea buscar --&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+    </div>
+    
+    <br>
+    <br>
+    <a href="../index.html" class="btn btn-warning">Volver al inicio</a>
+</body>
+</html>

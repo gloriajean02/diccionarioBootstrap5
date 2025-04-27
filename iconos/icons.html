@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iconos en Bootstrap 5</title>
+
+    <!-- Enlace a los archivos CSS de Bootstrap -->
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <!-- Enlace a los íconos de Bootstrap -->
+    <link href="../bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+
+    <style>
+        pre code {
+            font-size: 1rem;
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.5;
+        }
+    </style>
+
+</head>
+<body class="m-5">
+    <a href="../index.html" class="btn btn-warning">Volver al inicio</a>
+    <br>
+    <br>
+    
+    <h1>Iconos en Bootstrap 5</h1>
+
+    <hr>
+
+    <p>Lo primero que debemos hacer es descargar el <strong>Source code (zip)</strong> <a href="https://github.com/twbs/icons/releases/tag/v1.11.3">aquí</a></p>
+    <p>Luego trasladamos toda la carpeta <strong>font</strong> dentro de nuestro proyecto, por ejemplo dentro de otra carpeta llamada <strong>bootstrap-icons</strong>, seleccionaremos el <strong>bootstrap-icons.min.css</strong>.</p>
+    <p>Después lo incluimos en el html así, incluyendo la segunda línea de código (que enlaza a la galería de iconos de bootstrap):</p>
+
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;link href="../bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet"&gt;</code></pre>
+<pre><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"&gt;</code></pre>
+    </div>
+    <br>
+    
+    <!-- Explicación sobre los íconos de Bootstrap -->
+    <p>Puedes consultar los códigos de los iconos <a href="https://icons.getbootstrap.com/" target="_blank">aquí</a></p>
+
+    <!-- Ejemplo de ícono: Círculo relleno -->
+    <p>El siguiente ícono es un círculo:</p>
+    <i class="bi bi-0-circle-fill"></i>
+
+    <br><br>
+
+    <!-- Bloque de código para el ícono de círculo relleno -->
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;i class="bi bi-0-circle-fill"&gt;&lt;/i&gt;</code></pre>
+    </div>
+    <br><br>
+    <!-- Ejemplo de ícono: Batería con tamaño personalizado -->
+    <p>El siguiente ícono es una batería, y hemos ajustado su tamaño a 50px:</p>
+    <i class="bi bi-battery" style="font-size: 50px;"></i>
+    <br><br>
+    <!-- Bloque de código para el ícono de batería -->
+        <div class="card text-bg-dark p-3">
+            <pre><code>&lt;i class="bi bi-battery" style="font-size: 50px;"&gt;&lt;/i&gt;</code></pre>
+        </div>
+    
+    <br><br>
+
+    <!-- Ejemplo de ícono: Bug con color personalizado -->
+    <p>El siguiente ícono es un bug, y lo hemos coloreado de rojo:</p>
+    <i class="bi bi-bug-fill" style="color: red;"></i>
+
+    <br><br>
+    <!-- Bloque de código para el ícono de bug -->
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;i class="bi bi-bug-fill" style="color: red;"&gt;&lt;/i&gt;</code></pre>
+    </div>
+    
+    <br>
+    <br>
+    <a href="../index.html" class="btn btn-warning">Volver al inicio</a>
+
+</body>
+</html>

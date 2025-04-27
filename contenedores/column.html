@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos Columnas</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
+    <style>
+        pre code {
+            font-size: 1rem;
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.5;
+        }
+    </style>
+
+</head>
+<body class="m-5">
+    <a href="../index.html" class="btn btn-warning">Volver al inicio</a>
+    <br>
+    <br>
+
+    <h1>Columnas en Bootstrap 5</h1>
+
+    <hr>
+
+    <div class="container-md">
+
+        <!-- Ejemplo de tamaños automáticos -->
+        <h3>Tamaños automáticos</h3>
+        <p>Se pueden añadir hasta 12 columnas por fila, y el tamaño se distribuye de manera automática.</p>
+        <br>
+        <div class="row">
+            <div class="col bg-primary">
+                COL
+            </div>
+            <div class="col bg-danger">
+                COL
+            </div>
+        </div>
+        <br>
+        <div class="card text-bg-dark p-3">
+            <!-- Código de ejemplo -->
+        <pre><code>&lt;div class="row"&gt;
+    &lt;div class="col bg-primary"&gt;
+        COL
+    &lt;/div&gt;
+    &lt;div class="col bg-danger"&gt;
+        COL
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <br><br>
+        
+
+        <!-- Ejemplo de tamaños fijos (1-12) -->
+        <h3>Tamaños fijos (1-12)</h3>
+        <p>La pantalla queda dividida en 12 columnas por defecto. Podemos especificar el número de columnas que debe ocupar un elemento.</p>
+        <div class="row">
+            <div class="col-1 bg-success">
+                COL-1
+            </div>
+        </div>
+        <br>
+        <div class="card text-bg-dark p-3">
+            <pre><code>&lt;div class="row"&gt;
+    &lt;div class="col-1 bg-success"&gt;
+        COL-1
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <br><br>
+
+        <p>También podemos asignar más espacio. Por ejemplo, hacer que una columna ocupe 3 doceavos.</p>
+        <div class="row">
+            <div class="col-3 bg-success">
+                COL-3
+            </div>
+        </div>
+        <br>
+        <div class="card text-bg-dark p-3">
+            <pre><code>&lt;div class="row"&gt;
+    &lt;div class="col-3 bg-success"&gt;
+        COL-3
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <br><br>
+
+        <p>Si colocamos una columna de tamaño normal después de una de tamaño fijo, el espacio restante se distribuirá proporcionalmente.</p>
+        <div class="row">
+            <div class="col-3 bg-success">
+                COL-3
+            </div>
+            <div class="col bg-danger">
+                COL
+            </div>
+        </div>
+        <br>
+        <div class="card text-bg-dark p-3">
+            <pre><code>&lt;div class="row"&gt;
+    &lt;div class="col-3 bg-success"&gt;
+        COL-3
+    &lt;/div&gt;
+    &lt;div class="col bg-danger"&gt;
+        COL
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <br><br>
+
+        <!-- Ejemplo de punto de interrupción -->
+        <h3>Punto de interrupción</h3>
+        <p>Podemos hacer que las columnas cambien de tamaño según el ancho de la pantalla. En este caso, cuando la pantalla es grande, ocupan 12 columnas, pero cuando se reduce a tamaño mediano, ocupan 6 cada una y se colocan una debajo de la otra.</p>
+        <div class="row">
+            <div class="col-12 col-md-6 bg-success">
+                col-12 col-md-6
+            </div>
+            <div class="col-6 bg-danger">
+                COL-6
+            </div>
+        </div>
+        <br>
+        <div class="card text-bg-dark p-3">
+            <pre><code>&lt;div class="row"&gt;
+    &lt;div class="col-12 col-md-6 bg-success"&gt;
+        col-12 col-md-6
+    &lt;/div&gt;
+    &lt;div class="col-6 bg-danger"&gt;
+        COL-6
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <br><br>
+
+        <!-- Ejemplo de espaciados -->
+        <h3>Espaciados</h3>
+        <p>Es importante usar las clases de espaciado como <code>g-1</code>, <code>gy-3</code> o <code>gx-2</code>, en lugar de márgenes directos, para evitar que se rompan las columnas.</p>
+        <div class="row">
+            <div class="col-4 g-1 bg-success">
+                col-4 g-1
+            </div>
+            <div class="col-4 gy-3 bg-danger">
+                col-4 gy-3
+            </div>
+            <div class="col-4 gx-2 bg-warning">
+                col-4 gx-3
+            </div>
+        </div>
+        <br>
+        <div class="card text-bg-dark p-3">
+            <pre><code>&lt;div class="row"&gt;
+    &lt;div class="col-4 g-1 bg-success"&gt;
+        col-4 g-1
+    &lt;/div&gt;
+    &lt;div class="col-4 gy-3 bg-danger"&gt;
+        col-4 gy-3
+    &lt;/div&gt;
+    &lt;div class="col-4 gx-2 bg-warning"&gt;
+        col-4 gx-3
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        
+        <br><br>
+    </div>
+    
+    <br>
+    <br>
+    <a href="../index.html" class="btn btn-warning">Volver al inicio</a>
+
+</body>
+</html>

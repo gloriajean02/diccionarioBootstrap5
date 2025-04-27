@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal en Bootstrap 5</title>
+
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+</head>
+<body class="m-5">
+    <a href="../index.html" class="btn btn-warning">Volver al inicio</a>
+    <br>
+    <br>
+    <h1>Modal en Bootstrap 5</h1>
+    <hr>
+    <br>
+    <p>Este es un ejemplo de cómo utilizar el componente <code>modal</code> de Bootstrap 5. Los modales permiten mostrar contenido adicional en una ventana emergente, y podemos manejar su apertura y cierre mediante JavaScript.</p>
+
+    <!-- Botón para abrir el Modal -->
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Abrir Modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal Título</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Contenido del modal
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-success">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const myExampleModal = document.getElementById("exampleModal")
+        myExampleModal.addEventListener('show.bs.modal', event => {
+            console.log('Modal mostrado')
+        })
+
+        myExampleModal.addEventListener('hide.bs.modal', event => {
+            console.log('Modal ocultado')
+        })
+
+        const myExampleModalInstance = bootstrap.Modal.getOrCreateInstance(myExampleModal)
+        myExampleModalInstance.show()
+        // myExampleModalInstance.hide()
+    </script>
+
+    <br><br>
+    <!-- Visualización del código -->
+    <h1>Visualización del código</h1>
+    <h3>HTML del Modal</h3>
+    <br>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"&gt;
+    Abrir Modal
+&lt;/button&gt;
+
+&lt;div class="modal fade" id="exampleModal"&gt;
+    &lt;div class="modal-dialog"&gt;
+        &lt;div class="modal-content"&gt;
+            &lt;div class="modal-header"&gt;
+                &lt;h5 class="modal-title"&gt;Modal Título&lt;/h5&gt;
+                &lt;button type="button" class="btn-close" data-bs-dismiss="modal"&gt;&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;div class="modal-body"&gt;
+                Contenido del modal
+            &lt;/div&gt;
+            &lt;div class="modal-footer"&gt;
+                &lt;button type="button" class="btn btn-secondary" data-bs-dismiss="modal"&gt;Cerrar&lt;/button&gt;
+                &lt;button type="button" class="btn btn-success"&gt;Guardar&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <br>
+
+    <h3>JavaScript</h3>
+    <br>
+    <div class="card text-bg-dark p-3">
+        <pre><code style="color: #77ea77;">// 1. Obtención del elemento del Modal
+            const myExampleModal = document.getElementById("exampleModal");</code></pre>
+            
+        <pre><code style="color: #afafe9;">// 2. Añadir un event listener para escuchar cuando el modal se muestre
+            myExampleModal.addEventListener('show.bs.modal', event => {
+                console.log('Modal mostrado'); // Mensaje en consola cuando el modal se muestra
+            });</code></pre>
+            
+        <pre><code style="color: #ffffff;">// 3. Añadir un event listener para escuchar cuando el modal se oculte
+            myExampleModal.addEventListener('hide.bs.modal', event => {
+                console.log('Modal ocultado'); // Mensaje en consola cuando el modal se oculta
+            });</code></pre>
+            
+        <pre><code style="color: #00ff00;">// 4. Crear una instancia del Modal y mostrarlo
+            const myExampleModalInstance = bootstrap.Modal.getOrCreateInstance(myExampleModal);
+            myExampleModalInstance.show();</code></pre>
+    </div>
+    
+    <br>
+    <br>
+    <a href="../index.html" class="btn btn-warning">Volver al inicio</a>
+</body>
+</html>

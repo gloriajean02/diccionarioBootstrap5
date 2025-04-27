@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List group</title>
+
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    
+</head>
+<body class="m-5">
+    <a href="../index.html" class="btn btn-warning">Volver al inicio</a>
+    <br>
+    <br>
+    <h1>List group en Bootstrap 5</h1>
+    <hr>
+    <br>
+    <p>Este es un ejemplo de cómo utilizar el componente <code>list-group</code> de Bootstrap para crear una lista interactiva. Los elementos de la lista pueden tener diferentes estados, como activo o deshabilitado. También se incluyen ejemplos de cómo manejar eventos mediante JavaScript.</p>
+    <ul class="list-group" id="myTab">
+        <li class="list-group-item active">
+            Primero
+        </li>
+        <li class="list-group-item">
+            Segundo
+        </li>
+        <li class="list-group-item disabled">
+            Tercero
+        </li>
+    </ul>
+
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+
+        const myTab = document.getElementById("myTab")
+        myTab.addEventListener('show.bs.tab', event => {
+            console.log('show')
+        })
+
+        myTab.addEventListener('hide.bs.tab', event => {
+            console.log('hide')
+        })
+
+        myTab.addEventListener('hidden.bs.tab', event => {
+            console.log('hidden')
+        })
+
+        const myTabInstance = bootstrap.Tab.getOrCreateInstance('#myTab')
+        const myTabItem = bootstrap.Tab.getOrCreateInstance(myTabInstance._getChildren()[1])
+        myTabItem.show()
+        
+        
+    </script>
+
+<br>
+<br>
+<!-- Visualización del código -->
+<h1>Visualización del código</h1>
+<h3>List-group</h3>
+<br>
+<div class="card text-bg-dark p-3">
+    <pre><code>&lt;ul class="list-group" id="myTab"&gt;
+        &lt;li class="list-group-item active"&gt;
+            Primero
+        &lt;/li&gt;
+        &lt;li class="list-group-item"&gt;
+            Segundo
+        &lt;/li&gt;
+        &lt;li class="list-group-item disabled"&gt;
+            Tercero
+        &lt;/li&gt;
+    &lt;/ul&gt;</code></pre>
+</div>
+<br>
+    <h3>JavaScript</h3>
+    <br>
+    <div class="card text-bg-dark p-3">
+        <pre><code style="color: #77ea77;">// 1. Obtención del elemento de la lista (tab)
+            const myTab = document.getElementById("myTab");</code></pre>
+            
+                    <pre><code style="color: #afafe9;">// 2. Añadir un event listener para escuchar cuando el tab sea mostrado
+            myTab.addEventListener('show.bs.tab', event => {
+                console.log('show'); // Aquí se muestra un mensaje en la consola cuando el tab es mostrado
+            });</code></pre>
+            
+                    <pre><code style="color: #ffffff;">// 3. Añadir un event listener para escuchar cuando el tab sea ocultado
+            myTab.addEventListener('hide.bs.tab', event => {
+                console.log('hide'); // Aquí se muestra un mensaje en la consola cuando el tab es ocultado
+            });</code></pre>
+            
+                    <pre><code style="color: #00ff00;">// 4. Añadir un event listener para escuchar cuando el tab esté completamente oculto
+            myTab.addEventListener('hidden.bs.tab', event => {
+                console.log('hidden'); // Aquí se muestra un mensaje en la consola cuando el tab es completamente ocultado
+            });</code></pre>
+            
+                    <pre><code style="color: #03b7ff;">// 5. Crear una instancia de Bootstrap para el tab
+            const myTabInstance = bootstrap.Tab.getOrCreateInstance('#myTab');</code></pre>
+            
+                    <pre><code style="color: #7e7eff;">// 6. Acceder a un item del tab y mostrarlo programáticamente
+            const myTabItem = bootstrap.Tab.getOrCreateInstance(myTabInstance._getChildren()[1]); // Accede al segundo elemento
+            myTabItem.show(); // Muestra este item programáticamente</code></pre>
+    </div>
+    
+    <br>
+    <br>
+    <a href="../index.html" class="btn btn-warning">Volver al inicio</a>
+</body>
+</html>

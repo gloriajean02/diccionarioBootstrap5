@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes complejos</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+</head>
+
+<body class="m-5">
+    <a href="../index.html" class="btn btn-warning">Volver al inicio</a>
+    <br>
+    <br>
+    <h1>Componentes complejos en Bootstrap 5</h1>
+    <hr>
+
+    <!-- Nav: Barra de navegación simple con enlaces -->
+    <h1>Nav</h1>
+    <p>La clase <code>nav</code> se utiliza para crear una barra de navegación básica, donde se pueden agregar enlaces.
+        Este componente es comúnmente usado para crear menús.</p>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Opción 1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Opción 2</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">Opción 3</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                Dropdown
+            </a>
+            <ul class="dropdown-menu">
+                <li><a href="#" class="dropdown-item">Item 1</a></li>
+                <li><a href="#" class="dropdown-item">Item 2</a></li>
+                <li>
+                    <hr class="dropdown-divider" />
+                </li>
+                <li><a href="#" class="dropdown-item">Item 3</a></li>
+            </ul>
+        </li>
+    </ul>
+    <br>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;ul class="nav"&gt;
+        &lt;li class="nav-item"&gt;
+            &lt;a class="nav-link" href="#"&gt;Opción 1&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;
+            &lt;a class="nav-link" href="#"&gt;Opción 2&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;
+            &lt;a class="nav-link disabled" href="#"&gt;Opción 3&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li class="nav-item"&gt;
+            &lt;a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"&gt;Dropdown&lt;/a&gt;
+            &lt;ul class="dropdown-menu"&gt;
+                &lt;li&gt;&lt;a href="#" class="dropdown-item"&gt;Item 1&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#" class="dropdown-item"&gt;Item 2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;hr class="dropdown-divider"/&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#" class="dropdown-item"&gt;Item 3&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;</code></pre>
+
+    </div>
+    <br>
+    <br>
+    <!-- Nav Justificado en el Centro -->
+    <h3>Justificado en el centro</h3>
+    <p>Para centrar los elementos dentro de la barra de navegación, utilizamos la clase
+        <code>justify-content-center</code> que hace que los enlaces se distribuyan en el centro.</p>
+    <ul class="nav justify-content-center">
+        <li class="nav-item"><a class="nav-link" href="#">Opción 1</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Opción 2</a></li>
+        <li class="nav-item"><a class="nav-link disabled" href="#">Opción 3</a></li>
+    </ul>
+    <br>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;ul class="nav justify-content-center"&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;Opción 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;Opción 2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link disabled" href="#"&gt;Opción 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;</code></pre>
+    </div>
+
+    <br>
+    <!-- Nav Justificado en el Inicio -->
+    <h3>Justificado en el inicio</h3>
+    <p>La clase <code>justify-content-start</code> permite alinear los elementos de la barra de navegación hacia el
+        inicio (izquierda) de la página.</p>
+    <ul class="nav justify-content-start">
+        <li class="nav-item"><a class="nav-link" href="#">Opción 1</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Opción 2</a></li>
+        <li class="nav-item"><a class="nav-link disabled" href="#">Opción 3</a></li>
+    </ul>
+    <br>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;ul class="nav justify-content-start"&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;Opción 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;Opción 2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link disabled" href="#"&gt;Opción 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;</code></pre>
+    </div>
+    <br>
+
+    <!-- Nav Justificado en el Final -->
+    <h3>Justificado en el final</h3>
+    <p>Con la clase <code>justify-content-end</code>, los elementos de la barra de navegación se alinean al final
+        (derecha) de la página.</p>
+    <ul class="nav justify-content-end">
+        <li class="nav-item"><a class="nav-link" href="#">Opción 1</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Opción 2</a></li>
+        <li class="nav-item"><a class="nav-link disabled" href="#">Opción 3</a></li>
+    </ul>
+    <br>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;ul class="nav justify-content-end"&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;Opción 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;Opción 2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link disabled" href="#"&gt;Opción 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;</code></pre>
+    </div>
+    <br>
+
+    <!-- Nav en Flex y Alineado en Columnas -->
+    <h3>Alineado en columnas</h3>
+    <p>Si deseas que los enlaces se muestren en una columna, puedes usar la clase <code>flex-column</code> para
+        transformar el menú en una lista vertical.</p>
+    <ul class="nav flex-column">
+        <li class="nav-item"><a class="nav-link" href="#">Opción 1</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Opción 2</a></li>
+        <li class="nav-item"><a class="nav-link disabled" href="#">Opción 3</a></li>
+    </ul>
+    <br>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;ul class="nav flex-column"&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;Opción 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;Opción 2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link disabled" href="#"&gt;Opción 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;</code></pre>
+    </div>
+
+    <br>
+    <!-- Nav en tipo Pills -->
+    <h3>Nav en tipo pills</h3>
+    <p>La clase <code>nav-pills</code> crea un menú de pestañas (pills), que es un diseño con pestañas redondeadas y
+        activadas.</p>
+    <ul class="nav nav-pills">
+        <li class="nav-item"><a class="nav-link" href="#">Opción 1</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Opción 2</a></li>
+        <li class="nav-item"><a class="nav-link disabled" href="#">Opción 3</a></li>
+    </ul>
+    <br>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;ul class="nav nav-pills"&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#"&gt;Opción 1&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link active" href="#"&gt;Opción 2&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link disabled" href="#"&gt;Opción 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;</code></pre>
+    </div>
+
+
+    <br>
+    <br>
+
+    <!-- Tarjetas: Componentes visuales para mostrar contenido -->
+    <h1>Tarjetas</h1>
+    <p>Las tarjetas (<code>card</code>) son componentes visuales utilizados para mostrar contenido organizado, como
+        textos, imágenes y botones.</p>
+    <div class="card text-bg-danger">
+        <div class="card-header">
+            <h3>cabecera</h3>
+        </div>
+        <div class="card-body">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla similique corrupti commodi laborum animi?
+                Sint officia itaque quis deleniti soluta voluptates eveniet aliquam, sequi voluptatem placeat, sunt
+                maiores harum qui.</p>
+        </div>
+        <div class="card-footer">
+            <h3>footer</h3>
+        </div>
+    </div>
+    <br>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;div class="card text-bg-danger"&gt;
+        &lt;div class="card-header"&gt;
+            &lt;h3&gt;cabecera&lt;/h3&gt;
+        &lt;/div&gt;
+        &lt;div class="card-body"&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit...&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="card-footer"&gt;
+            &lt;h3&gt;footer&lt;/h3&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+    </div>
+
+
+    <br>
+    <br>
+    <a href="../index.html" class="btn btn-warning">Volver al inicio</a>
+    <br>
+    <br>
+
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

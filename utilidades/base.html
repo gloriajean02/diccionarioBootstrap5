@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utilidades - Bootstrap 5</title>
+
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    
+    <style>
+        pre code {
+            font-size: 1rem;
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body class="m-5">
+    <a href="../index.html" class="btn btn-warning">Volver al inicio</a>
+    <br>
+    <br>
+
+    <h1>Utilidades básicas en Bootstrap 5</h1>
+
+    <hr>
+
+    <h1>✨ Opacidad</h1>
+    <p>La propiedad <strong>opacidad</strong> controla la transparencia de un elemento. Cuanto menor es el valor, más transparente será.</p>
+
+    <div class="opacity-100 bg-success" style="width: 50px; height: 50px;">Opacidad 100</div>
+    <div class="opacity-75 bg-success" style="width: 50px; height: 50px;">Opacidad 75</div>
+    <div class="opacity-50 bg-success" style="width: 50px; height: 50px;">Opacidad 50</div>
+    <div class="opacity-25 bg-success" style="width: 50px; height: 50px;">Opacidad 25</div>
+
+    <br>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;div class="opacity-100 bg-success"&gt;Opacidad 100&lt;/div&gt;
+&lt;div class="opacity-75 bg-success"&gt;Opacidad 75&lt;/div&gt;
+&lt;div class="opacity-50 bg-success"&gt;Opacidad 50&lt;/div&gt;
+&lt;div class="opacity-25 bg-success"&gt;Opacidad 25&lt;/div&gt;</code></pre>
+    </div>
+
+    <br><br>
+
+    <h1>👁️ Visibilidad</h1>
+    <p>Controla la visibilidad de los elementos usando <strong>visible</strong> e <strong>invisible</strong>.</p>
+
+    <div class="visible">Visible 👀</div>
+    <div class="invisible">Invisible 👻</div>
+
+    <br>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;div class="visible"&gt;Visible&lt;/div&gt;
+&lt;div class="invisible"&gt;Invisible&lt;/div&gt;</code></pre>
+    </div>
+
+    <br><br>
+
+    <h1>📏 Margin y Padding</h1>
+    <p>Se usa <strong>m</strong> para margen y <strong>p</strong> para padding, de 1 a 5:</p>
+    <ul>
+        <li><code>mb-num</code> o <code>pb-num</code> para abajo (bottom)</li>
+        <li><code>ms-num</code> o <code>ps-num</code> para inicio (start)</li>
+        <li><code>me-num</code> o <code>pe-num</code> para final (end)</li>
+        <li><code>my-num</code> o <code>py-num</code> para eje Y</li>
+        <li><code>mx-num</code> o <code>px-num</code> para eje X</li>
+    </ul>
+
+    <div class="card text-bg-danger m-5">
+        <div class="card-body">
+            <div class="m-1">margin 1</div>
+            <div class="m-2">margin 2</div>
+            <div class="m-3">margin 3</div>
+            <div class="m-4">margin 4</div>
+            <div class="m-5">margin 5</div>
+        </div>
+    </div>
+
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;div class="card text-bg-danger m-5"&gt;
+    &lt;div class="m-1"&gt;margin 1&lt;/div&gt;
+    &lt;div class="m-2"&gt;margin 2&lt;/div&gt;
+    &lt;div class="m-3"&gt;margin 3&lt;/div&gt;
+    &lt;div class="m-4"&gt;margin 4&lt;/div&gt;
+    &lt;div class="m-5"&gt;margin 5&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <br><br>
+
+    <h1>💨 Flotados</h1>
+    <p>Flotar elementos a la izquierda o derecha usando <strong>float-start</strong> y <strong>float-end</strong>.</p>
+
+    <div class="float-lg-start float-start">Flotado a la izquierda</div>
+    <div class="float-end">Flotado a la derecha</div>
+
+    <br><br>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;div class="float-lg-start float-start"&gt;Flotado a la izquierda&lt;/div&gt;
+&lt;div class="float-end"&gt;Flotado a la derecha&lt;/div&gt;</code></pre>
+    </div>
+
+    <br><br>
+
+    <h1>🎨 Colores</h1>
+    <p>Aplica colores a texto y fondos usando las clases <strong>text-*</strong> y <strong>bg-*</strong>.</p>
+
+    <p class="text-primary">Text Primary</p>
+    <p class="text-secondary">Text Secondary</p>
+    <p class="text-success">Text Success</p>
+    <p class="text-danger">Text Danger</p>
+    <p class="text-warning">Text Warning</p>
+    <p class="text-info bg-dark">Text Info</p>
+    <p class="text-light bg-dark">Text Light</p>
+    <p class="text-dark">Text Dark</p>
+    <p class="text-body">Text Body</p>
+    <p class="text-body-secondary">Text Body Secondary</p>
+    <p class="text-body-tertiary">Text Body Tertiary</p>
+    <p class="text-white bg-dark">Text white</p>
+    <p class="text-black">Text black</p>
+    <p class="text-white-50 bg-dark">Text white 50</p>
+    <p class="text-black-50">Text black 50</p>
+
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;p class="text-primary"&gt;Text Primary&lt;/p&gt;
+&lt;p class="text-secondary"&gt;Text Secondary&lt;/p&gt;
+&lt;p class="text-success"&gt;Text Success&lt;/p&gt;
+&lt;p class="text-danger"&gt;Text Danger&lt;/p&gt;
+... etc.</code></pre>
+    </div>
+
+    <br><br>
+
+    <h1>🖌️ Background</h1>
+    <p>Los fondos se modifican con clases como <strong>bg-primary</strong>, <strong>bg-success</strong>, etc.</p>
+
+    <div class="p-3 m-3 bg-primary">bg-primary</div>
+    <div class="p-3 m-3 bg-primary-subtle">bg-primary-subtle</div>
+    <div class="p-3 m-3 bg-secondary">bg-secondary</div>
+    <div class="p-3 m-3 bg-success">bg-success</div>
+    <div class="p-3 m-3 bg-success-subtle">bg-success-subtle</div>
+    <div class="p-3 m-3 bg-warning">bg-warning</div>
+    <div class="p-3 m-3 bg-warning-subtle">bg-warning-subtle</div>
+
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;div class="p-3 bg-primary"&gt;bg-primary&lt;/div&gt;
+&lt;div class="p-3 bg-success"&gt;bg-success&lt;/div&gt;
+... etc.</code></pre>
+    </div>
+
+    <br><br>
+
+    <h1>🔲 Bordes</h1>
+    <p>Los bordes se personalizan con <strong>border</strong> más clases de color y forma como <strong>rounded</strong>.</p>
+
+    <div class="border border-success rounded mb-1" style="height: 50px;"></div>
+    <div class="border border-danger mb-1" style="height: 50px;"></div>
+    <div class="border border-warning border-top-0 mb-1" style="height: 50px;"></div>
+
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;div class="border border-success rounded"&gt;&lt;/div&gt;
+&lt;div class="border border-danger"&gt;&lt;/div&gt;
+&lt;div class="border border-warning border-top-0"&gt;&lt;/div&gt;</code></pre>
+    </div>
+
+    <br><br>
+
+    <h1>🔤 Texto</h1>
+    <p>Control de alineación, tamaño, peso y estilo del texto.</p>
+
+    <p class="text-start">Texto a la izquierda</p>
+    <p class="text-center">Texto centrado</p>
+    <p class="text-end">Texto a la derecha</p>
+
+    <br>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;p class="text-start"&gt;Texto alineado a la izquierda&lt;/p&gt;
+&lt;p class="text-center"&gt;Texto centrado&lt;/p&gt;
+&lt;p class="text-end"&gt;Texto alineado a la derecha&lt;/p&gt;</code></pre>
+    </div>
+
+    <br><br>
+    <p class="fs-1">Tamaño fs-1</p>
+    <p class="fs-2">Tamaño fs-2</p>
+    <p class="fs-3">Tamaño fs-3</p>
+    <p class="fs-4">Tamaño fs-4</p>
+    <p class="fs-5">Tamaño fs-5</p>
+    <p class="fs-6">Tamaño fs-6</p>
+
+    <br>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;p class="text-start"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+&lt;p class="text-center"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+&lt;p class="text-end"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+&lt;p class="fs-1"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+&lt;p class="fs-2"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+&lt;p class="fs-3"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+&lt;p class="fs-4"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+&lt;p class="fs-5"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+&lt;p class="fs-6"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;</code></pre>            
+    </div>
+    <br><br>
+    <p class="fw-bold">Negrita</p>
+    <p class="fw-bolder">Más negrita</p>
+    <p class="fw-semibold">Seminegrita</p>
+    <p class="fw-medium">Medio</p>
+    <p class="fw-regular">Normal</p>
+    <p class="fw-light">Ligero</p>
+    <p class="fw-lighter">Más ligero</p>
+    <p class="fst-italic">Cursiva</p>
+    <p class="fst-normal">Normal</p>
+    <br>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;p class="fw-bold"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+&lt;p class="fw-bolder"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+&lt;p class="fw-semibold"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+&lt;p class="fw-medium"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+&lt;p class="fw-regular"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+&lt;p class="fw-light"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+&lt;p class="fw-lighter"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+&lt;p class="fst-italic"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+&lt;p class="fst-normal"&gt;Lorem ipsum dolor sit amet&lt;/p&gt;</code></pre>            
+    </div>
+
+    
+
+    <br><br>
+
+    <h1>📏 Width y Height</h1>
+    <h3>Width</h3>
+    <div class="w-25 p-3 m-1 bg-success">w-25</div>
+    <div class="w-50 p-3 m-1 bg-success">w-50</div>
+    <div class="w-75 p-3 m-1 bg-success">w-75</div>
+    <div class="w-100 p-3 m-1 bg-success">w-100</div>
+    <p>Se puede hacer lo mismo con height usando las clases <code>h-25</code>, <code>h-50</code>, etc.</p>
+
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;div class="w-25 p-3 bg-success"&gt;w-25&lt;/div&gt;
+&lt;div class="w-50 p-3 bg-success"&gt;w-50&lt;/div&gt;
+&lt;div class="w-75 p-3 bg-success"&gt;w-75&lt;/div&gt;
+&lt;div class="w-100 p-3 bg-success"&gt;w-100&lt;/div&gt;</code></pre>
+    </div>
+
+    <br><br>
+
+    <h3>🏔️ Altura de ventana</h3>
+    <p>También podemos usar clases como <code>vh-100</code> para que un elemento ocupe el 100% del alto de la ventana.</p>
+
+    <div class="vh-100 p-3 bg-success m-1" style="width: 120px;">vh-100</div>
+
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;div class="vh-100 p-3 bg-success" style="width: 120px;"&gt;vh-100&lt;/div&gt;</code></pre>
+    </div>
+
+    
+    <br>
+    <br>
+    <a href="../index.html" class="btn btn-warning">Volver al inicio</a>
+
+</body>
+</html>
+

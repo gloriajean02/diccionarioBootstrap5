@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componentes básicos</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body class="m-5">
+    <a href="../index.html" class="btn btn-warning">Volver al inicio</a>
+    <br>
+    <br>
+    <h1>Componentes básicos en Bootstrap 5</h1>
+
+    <hr>
+    <p>Los botones de Bootstrap tienen diferentes clases para variar su estilo y color. A continuación, puedes ver
+        varios ejemplos con distintos estilos de botones.</p>
+
+    <button class="btn btn-primary">Botón primary</button>
+    <button class="btn btn-secondary">Botón secondary</button>
+    <button class="btn btn-success">Botón success</button>
+    <button class="btn btn-danger">Botón danger</button>
+    <button class="btn btn-warning">Botón warning</button>
+    <button class="btn btn-info">Botón info</button>
+    <button class="btn btn-light">Botón light</button>
+    <button class="btn btn-dark">Botón dark</button>
+    <button class="btn btn-link">Botón link</button>
+
+    <br>
+    <br>
+    <!-- Código de ejemplo -->
+    <pre><code>&lt;button class="btn btn-primary"&gt;Botón primary&lt;/button&gt;
+&lt;button class="btn btn-secondary"&gt;Botón secondary&lt;/button&gt;
+&lt;button class="btn btn-success"&gt;Botón success&lt;/button&gt;
+&lt;button class="btn btn-danger"&gt;Botón danger&lt;/button&gt;
+&lt;button class="btn btn-warning"&gt;Botón warning&lt;/button&gt;
+&lt;button class="btn btn-info"&gt;Botón info&lt;/button&gt;
+&lt;button class="btn btn-light"&gt;Botón light&lt;/button&gt;
+&lt;button class="btn btn-dark"&gt;Botón dark&lt;/button&gt;
+&lt;button class="btn btn-link"&gt;Botón link&lt;/button&gt;</code></pre>
+
+    <br>
+    <br>
+
+    <!-- Ejemplo de Botones Outline -->
+    <h3>Outline</h3>
+    <p>Los botones con clase <code>btn-outline-*</code> tienen un borde, pero sin un fondo colorido. Son útiles para
+        combinar con fondos de colores más suaves o para dar un toque sutil a los botones.</p>
+
+    <button class="btn btn-outline-info">Botón info</button>
+    <button class="btn btn-outline-success">Botón success</button>
+    <a href="#" class="btn btn-outline-dark">Botón dark</a>
+    <br>
+    <br>
+    <!-- Código de ejemplo -->
+    <pre><code>&lt;button class="btn btn-outline-info"&gt;Botón info&lt;/button&gt;
+&lt;button class="btn btn-outline-success"&gt;Botón success&lt;/button&gt;
+&lt;a href="#" class="btn btn-outline-dark"&gt;Botón dark&lt;/a&gt;</code></pre>
+
+    <br>
+    <br>
+
+    <!-- Ejemplo de Botones de Tamaño -->
+    <h3>Tamaños</h3>
+    <p>Los botones pueden tener distintos tamaños para ajustarse mejor a la interfaz de usuario. Puedes usar clases como
+        <code>btn-sm</code> para botones pequeños, <code>btn-md</code> para botones medianos y <code>btn-lg</code> para
+        botones grandes.</p>
+
+    <button class="btn btn-outline-info btn-sm">Botón small</button>
+    <button class="btn btn-outline-success btn-md">Botón middle</button>
+    <a href="#" class="btn btn-outline-dark btn-lg">Botón large</a>
+    <br>
+    <br>
+    <!-- Código de ejemplo -->
+    <pre><code>&lt;button class="btn btn-outline-info btn-sm"&gt;Botón small&lt;/button&gt;
+&lt;button class="btn btn-outline-success btn-md"&gt;Botón middle&lt;/button&gt;
+&lt;a href="#" class="btn btn-outline-dark btn-lg"&gt;Botón large&lt;/a&gt;</code></pre>
+
+    <br>
+    <br>
+
+    <!-- Ejemplo de Botones Agrupados -->
+    <h1>Botones agrupados</h1>
+    <p>Los botones también pueden agruparse dentro de un <code>div</code> con la clase <code>btn-group</code> para
+        formar un conjunto de botones alineados horizontalmente.</p>
+
+    <div class="btn-group">
+        <button class="btn btn-primary">Botón primary</button>
+        <button class="btn btn-secondary">Botón secondary</button>
+        <button class="btn btn-success">Botón success</button>
+    </div>
+    <br>
+    <br>
+    <!-- Código de ejemplo -->
+    <pre><code>&lt;div class="btn-group"&gt;
+    &lt;button class="btn btn-primary"&gt;Botón primary&lt;/button&gt;
+    &lt;button class="btn btn-secondary"&gt;Botón secondary&lt;/button&gt;
+    &lt;button class="btn btn-success"&gt;Botón success&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+    <br><br>
+
+    <!-- Ejemplo de Botones Check -->
+    <h1>Botones check</h1>
+    <p>Los botones de tipo "check" se utilizan para representar acciones de selección, como un "toggle". Se pueden
+        emplear con etiquetas de <code>input</code> del tipo <code>checkbox</code>.</p>
+
+    <div class="btn-group">
+        <input type="checkbox" class="btn-check" id="btncheck1">
+        <label class="btn btn-outline-secondary" for="btncheck1">Botón secondary</label>
+    </div>
+    <br>
+    <br>
+    <!-- Código de ejemplo -->
+    <pre><code>&lt;div class="btn-group"&gt;
+    &lt;input type="checkbox" class="btn-check" id="btncheck1"&gt;
+    &lt;label class="btn btn-outline-secondary" for="btncheck1"&gt;Botón secondary&lt;/label&gt;
+&lt;/div&gt;</code></pre>
+
+    <br>
+    <br>
+
+    <!-- Ejemplo de Badge -->
+    <h1>Badge</h1>
+    <p>Las <code>badge</code> se utilizan para mostrar información adicional, como un número de mensajes o
+        notificaciones.</p>
+
+    <button class="btn btn-primary">
+        Message <span class="badge text-bg-secondary rounded-pill">3</span>
+    </button>
+    <br>
+    <br>
+    <!-- Código de ejemplo -->
+    <pre><code>&lt;button class="btn btn-primary"&gt;
+        Message &lt;span class="badge text-bg-secondary rounded-pill"&gt;3&lt;/span&gt;
+    &lt;/button&gt;</code></pre>
+
+    <br>
+    <br>
+    <a href="../index.html" class="btn btn-warning">Volver al inicio</a>
+    <br>
+    <br>
+
+</body>
+
+</html>

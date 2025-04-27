@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+
+    <!-- Incluyendo Prism.js para resaltado de sintaxis -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+</head>
+<body class="m-5">
+    <a href="../index.html" class="btn btn-warning">Volver al inicio</a>
+    <br>
+    <br>
+    <h1>Perfil de Usuario en Bootstrap 5</h1>
+    <hr>
+    <br>
+    <p>Este es un ejemplo de cómo crear un perfil de usuario usando Bootstrap 5. Utiliza una tarjeta con una imagen, información y botones interactivos como "Message" y "Follow". Se usa <code>col-auto</code> para asegurar que la info quede dentro de la.</p>
+
+    <!-- Sección de perfil -->
+    <section >
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <!-- Columna con la tarjeta -->
+                <div class="col col-auto">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <!-- Contenido del perfil -->
+                            <div class="d-flex">
+                                <!-- Imagen de perfil -->
+                                <div class="flex-shrink-0">
+                                    <img src="../images/avatar.jpg" alt="" style="width: 180px;">
+                                </div>
+                                <!-- Información del usuario -->
+                                <div class="flex-grow-1 ms-3">
+                                    <h5 class="mb-1">Ana Pérez</h5>
+                                    <p class="mb-2 pb-1">Software Engineer</p>
+                                    <!-- Estadísticas de usuario -->
+                                    <div class="d-flex justify-content-center rounded-3 p-2 mb-2" style="background-color: #EEE;">
+                                        <div>
+                                            <p class="small text-body-secondary mb-1">Proyectos</p>
+                                            <p class="mb-0">15</p>
+                                        </div>
+                                        <div class="px-3">
+                                            <p class="small text-body-secondary mb-1">Certificados</p>
+                                            <p class="mb-0">4</p>
+                                        </div>
+                                        <div>
+                                            <p class="small text-body-secondary mb-1">Equipos</p>
+                                            <p class="mb-0">2</p>
+                                        </div>
+                                    </div>
+                                    <!-- Botones de acción -->
+                                    <div class="d-flex">
+                                        <button type="button" class="btn btn-outline-primary me-1 flex-grow-1 position-relative">
+                                            Message
+                                            <span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-danger">
+                                                10
+                                            </span>
+                                        </button>
+                                        <button class="flex-grow-1 btn btn-primary">
+                                            Follow
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <br><br>
+    <!-- Visualización del código -->
+    <h1>Visualización del código</h1>
+    <h3>HTML de la tarjeta de perfil</h3>
+    <br>
+    <div class="card text-bg-dark p-3">
+        <pre><code class="language-html">&lt;section class="vh-100"&gt; &lt;!-- Sección principal, ocupa el 100% de la altura de la ventana --&gt;
+        &lt;div class="container py-5 h-100"&gt; &lt;!-- Contenedor que centra el contenido, con relleno y altura 100% --&gt;
+            &lt;div class="row d-flex justify-content-center align-items-center h-100"&gt; &lt;!-- Fila para alinear el contenido en el centro --&gt;
+                &lt;div class="col col-md-9 col-lg-7 col-xl-5"&gt; &lt;!-- Columna con un diseño responsive: ocupa 9 columnas en md, 7 en lg, y 5 en xl --&gt;
+                    &lt;div class="card"&gt; &lt;!-- Tarjeta que contiene la información --&gt;
+                        &lt;div class="card-body p-4"&gt; &lt;!-- Cuerpo de la tarjeta con padding de 4 --&gt;
+                            &lt;div class="d-flex"&gt; &lt;!-- Flexbox para organizar los elementos en fila --&gt;
+                                &lt;div class="flex-shrink-0"&gt; &lt;!-- Este div contiene la imagen y no se redimensiona --&gt;
+                                    &lt;img src="../images/avatar.jpg" alt="" style="width: 180px;"&gt; &lt;!-- Imagen de perfil con un tamaño fijo --&gt;
+                                &lt;/div&gt;
+                                &lt;div class="flex-grow-1 ms-3"&gt; &lt;!-- Este div ocupa el resto del espacio disponible, con margen a la izquierda --&gt;
+                                    &lt;h5 class="mb-1"&gt;Ana Pérez&lt;/h5&gt; &lt;!-- Nombre de la persona --&gt;
+                                    &lt;p class="mb-2 pb-1"&gt;Software Engineer&lt;/p&gt; &lt;!-- Puesto de trabajo --&gt;
+                                    
+                                    &lt;!-- Estadísticas del perfil en un fondo gris --&gt;
+                                    &lt;div class="d-flex justify-content-center rounded-3 p-2 mb-2" style="background-color: #EEE;"&gt;
+                                        &lt;div&gt; &lt;!-- Primer bloque de estadísticas --&gt;
+                                            &lt;p class="small text-body-secondary mb-1"&gt;Proyectos&lt;/p&gt; &lt;!-- Título de la estadística --&gt;
+                                            &lt;p class="mb-0"&gt;15&lt;/p&gt; &lt;!-- Valor de la estadística --&gt;
+                                        &lt;/div&gt;
+                                        &lt;div class="px-3"&gt; &lt;!-- Segundo bloque de estadísticas con padding horizontal --&gt;
+                                            &lt;p class="small text-body-secondary mb-1"&gt;Certificados&lt;/p&gt;
+                                            &lt;p class="mb-0"&gt;4&lt;/p&gt;
+                                        &lt;/div&gt;
+                                        &lt;div&gt; &lt;!-- Tercer bloque de estadísticas --&gt;
+                                            &lt;p class="small text-body-secondary mb-1"&gt;Equipos&lt;/p&gt;
+                                            &lt;p class="mb-0"&gt;2&lt;/p&gt;
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+    
+                                    &lt;!-- Fila de botones: uno para enviar mensaje y otro para seguir --&gt;
+                                    &lt;div class="d-flex"&gt;
+                                        &lt;button type="button" class="btn btn-outline-primary me-1 flex-grow-1 position-relative"&gt;
+                                            Message &lt;!-- Botón de mensaje --&gt;
+                                            &lt;span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-danger"&gt;
+                                                10 &lt;!-- Badge que indica el número de mensajes --&gt;
+                                            &lt;/span&gt;
+                                        &lt;/button&gt;
+                                        &lt;button class="flex-grow-1 btn btn-primary"&gt; &lt;!-- Botón de seguir --&gt;
+                                            Follow
+                                        &lt;/button&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;</code></pre>
+    </div>
+    
+    <br>
+    <br>
+    <a href="../index.html" class="btn btn-warning">Volver al inicio</a>
+
+    <br>
+</body>
+</html>

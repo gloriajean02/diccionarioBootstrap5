@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de Position</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <style>
+        .demo-box {
+            width: 200px;
+            height: 100px;
+            margin: 20px;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .relative-parent {
+            position: relative;
+            height: 300px;
+            background-color: lightgray;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+<body class="m-5" style="height: 2000px; padding: 20px;">
+    <div class="text-end">
+        <a href="../index.html" class="btn btn-warning">Volver al inicio</a>
+    </div>
+    <br>
+    <br>
+    <h1 class="mt-5">Positions en Bootstrap - Ejemplos básicos</h1>
+
+    <hr>
+
+
+    <!-- STATIC -->
+    <div class="demo-box bg-primary position-static">
+        Static (normal)
+    </div>
+    
+    <!-- RELATIVE -->
+    <div class="demo-box bg-success position-relative" style="top: 20px; left: 20px;">
+        Relative (movido 20px, con un style=top: 20px; left: 20px;)
+    </div>
+    <br><br>
+    <!-- ABSOLUTE dentro de un contenedor relativo -->
+    <div class="relative-parent">
+        Contenedor relativo
+        <div class="demo-box bg-danger position-absolute" style="top: 10px; right: 10px;">
+            Absolute (con un style=top: 10px; right: 10px;)
+        </div>
+    </div>
+
+    <!-- FIXED -->
+    <div class="demo-box bg-warning text-dark position-fixed" style="top: 10px; left: 10px;">
+        Fixed (siempre arriba)
+    </div>
+
+    <!-- STICKY -->
+    <div style="height: 1000px;">
+        <div class="demo-box bg-info position-sticky" style="top: 10px;">
+            Sticky (se pega)
+        </div>
+    </div>
+
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <br>
+    <br>
+    <div class="text-end">
+        <a href="../index.html" class="btn btn-warning">Volver al inicio</a>
+    </div>
+</body>
+</html>

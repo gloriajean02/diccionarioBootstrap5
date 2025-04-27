@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    
+</head>
+<body class="m-5">
+    <a href="../index.html" class="btn btn-warning">Volver al inicio</a>
+    <br>
+    <br>
+    <h1>Dropdown en Bootstrap 5</h1>
+    <hr>
+    <br>
+    <div>
+        <p>Este es un ejemplo de cómo implementar un menú desplegable (dropdown) utilizando el componente <code>dropdown</code> de Bootstrap. El botón es el que activa el menú, y este contiene elementos que pueden ser seleccionados. Puedes ver comentarios en el código explicando el js.</p>
+
+        <!-- Dropdown Button -->
+        <button class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown">
+            Mi listado
+            <ul class="dropdown-menu">
+                <li>
+                    <a href="#" class="dropdown-item">Item 1</a>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-item">Item 2</a>
+                </li>
+                <li>
+                    <hr class="dropdown-divider"/>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-item">Item 3</a>
+                </li>
+            </ul>
+        </button>
+    </div>
+
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Obtención del elemento del dropdown
+        const myDropdown = document.getElementById("myDropdown")
+
+        // Evento que se activa cuando el dropdown es mostrado
+        myDropdown.addEventListener('show.bs.dropdown', event => {
+            console.log('show')
+        })
+
+        // Evento que se activa cuando el dropdown es ocultado
+        myDropdown.addEventListener('hide.bs.dropdown', event => {
+            console.log('hide')
+        })
+
+        // Crear una instancia de Bootstrap para el dropdown y mostrarla u ocultarla programáticamente
+        const myDropdownInstance = bootstrap.Dropdown.getOrCreateInstance('#myDropdown')
+        myDropdownInstance.show()
+        myDropdownInstance.hide()
+    </script>
+
+    <br>
+    <br>
+    <!-- Visualización del código -->
+    <h1>Visualización del código</h1>
+    <h3>Dropdown</h3>
+    <br>
+    <div class="card text-bg-dark p-3">
+        <pre><code>&lt;button class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown"&gt;
+    Mi listado
+    &lt;ul class="dropdown-menu"&gt;
+        &lt;li&gt;
+            &lt;a href="#" class="dropdown-item"&gt;Item 1&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" class="dropdown-item"&gt;Item 2&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;hr class="dropdown-divider"/&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;a href="#" class="dropdown-item"&gt;Item 3&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/button&gt;</code></pre>
+    </div>
+    
+    <br>
+    <h3>JavaScript</h3>
+    <br>
+    <div class="card text-bg-dark p-3">
+        <pre><code style="color: #77ea77;">// 1. Obtención del elemento del dropdown mediante su ID
+    const myDropdown = document.getElementById("myDropdown");</code></pre>
+    
+            <pre><code style="color: #afafe9;">// 2. Añadir un event listener para escuchar cuando el dropdown se despliegue
+    myDropdown.addEventListener('show.bs.dropdown', event => {
+        console.log('show'); // Aquí se muestra un mensaje en la consola cuando el dropdown se despliega
+    });</code></pre>
+    
+            <pre><code style="color: #ffffff;">// 3. Añadir un event listener para escuchar cuando el dropdown se oculte
+    myDropdown.addEventListener('hide.bs.dropdown', event => {
+        console.log('hide'); // Aquí se muestra un mensaje en la consola cuando el dropdown se oculta
+    });</code></pre>
+    
+            <pre><code style="color: #00ff00;">// 4. Crear una instancia de la clase Bootstrap para el dropdown
+    const myDropdownInstance = bootstrap.Dropdown.getOrCreateInstance('#myDropdown');</code></pre>
+    
+            <pre><code style="color: #03b7ff;">// 5. Mostrar el dropdown de manera programática
+    myDropdownInstance.show(); // Esto despliega el menú del dropdown</code></pre>
+    
+            <pre><code style="color: #7e7eff;">// 6. Ocultar el dropdown de manera programática
+    myDropdownInstance.hide(); // Esto oculta el menú del dropdown</code></pre>
+    </div>
+    
+    <br>
+    <br>
+    <a href="../index.html" class="btn btn-warning">Volver al inicio</a>
+    
+</body> 
+</html>

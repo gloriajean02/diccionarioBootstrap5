@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alertas en Bootstrap 5</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+</head>
+
+<body class="m-5">
+    <a href="../index.html" class="btn btn-warning">Volver al inicio</a>
+    <br>
+    <br>
+    <h1>Alertas en Bootstrap 5</h1>
+
+    <hr>
+
+    <!-- Ejemplo de alerta success -->
+    <h3>Alerta Success</h3>
+    <p>La clase <code>.alert-success</code> se usa para mostrar un mensaje de éxito con un fondo verde.</p>
+    <div class="alert alert-success">Alerta success</div>
+    <!-- Código de ejemplo -->
+    <pre><code>&lt;div class="alert alert-success"&gt;Alerta success&lt;/div&gt;</code></pre>
+
+    <!-- Ejemplo de alerta primaria -->
+    <h3>Alerta Primary</h3>
+    <p>La clase <code>.alert-primary</code> se utiliza para mostrar una alerta con un fondo azul, comúnmente usada para
+        información importante.</p>
+    <div class="alert alert-primary">Alerta primary</div>
+    <!-- Código de ejemplo -->
+    <pre><code>&lt;div class="alert alert-primary"&gt;Alerta primary&lt;/div&gt;</code></pre>
+
+    <!-- Ejemplo de alerta danger -->
+    <h3>Alerta Danger</h3>
+    <p>La clase <code>.alert-danger</code> se utiliza para mostrar una alerta con un fondo rojo, comúnmente usada para
+        mensajes de advertencia o error.</p>
+    <div class="alert alert-danger">Alerta danger</div>
+    <!-- Código de ejemplo -->
+    <pre><code>&lt;div class="alert alert-danger"&gt;Alerta danger&lt;/div&gt;</code></pre>
+
+    <!-- Ejemplo de alerta con encabezado y cuerpo -->
+    <h3>Alerta con Título y Cuerpo</h3>
+    <p>En este ejemplo, la alerta contiene un encabezado <code>&lt;h4&gt;</code> y un cuerpo de texto en un párrafo.</p>
+    <div class="alert alert-danger">
+        <h4 class="alert-heading">Título</h4>
+        <p>Este es el cuerpo de la alerta con un mensaje más detallado.</p>
+    </div>
+    <!-- Código de ejemplo -->
+    <pre><code>&lt;div class="alert alert-danger"&gt;
+    &lt;h4 class="alert-heading"&gt;Título&lt;/h4&gt;
+    &lt;p&gt;Este es el cuerpo de la alerta con un mensaje más detallado.&lt;/p&gt;
+    &lt;/div&gt;</code></pre>
+
+    <!-- Ejemplo de alerta con botón de cierre -->
+    <h3>Alerta con Botón de Cierre</h3>
+    <p>El botón de cierre se añade con la clase <code>.btn-close</code> y el atributo
+        <code>data-bs-dismiss='alert'</code>. Al hacer clic en el botón, la alerta se cierra.</p>
+    <div class="alert alert-danger" id="myAlert">
+        <h4 class="alert-heading">Título</h4>
+        <p>Este es un cuerpo de texto.</p>
+        <button class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+    <!-- Código de ejemplo -->
+    <pre><code>&lt;div class="alert alert-danger" id="myAlert"&gt;
+    &lt;h4 class="alert-heading"&gt;Título&lt;/h4&gt;
+    &lt;p&gt;Este es un cuerpo de texto.&lt;/p&gt;
+    &lt;button class="btn-close" data-bs-dismiss="alert"&gt;&lt;/button&gt;
+    &lt;/div&gt;</code></pre>
+
+    <!-- Explicación del código JavaScript -->
+    <h3>Interacción con JavaScript</h3>
+    <p>En este ejemplo, vamos a utilizar JavaScript para manejar la interacción con las alertas. Usamos el evento
+        <code>close.bs.alert</code> para detectar cuando una alerta se ha cerrado y ejecutar una acción.</p>
+
+    <h4>Escuchar el Cierre de la Alerta</h4>
+    <p>Para detectar el cierre de la alerta, primero seleccionamos el elemento con <code>document.getElementById</code>
+        y luego añadimos un "listener" de evento con <code>addEventListener</code>.</p>
+    <pre><code>
+    // Seleccionamos la alerta con el id 'myAlert'
+    const myAlert = document.getElementById("myAlert");
+
+    // Añadimos un listener para detectar el evento 'close.bs.alert'
+    myAlert.addEventListener('close.bs.alert', event => {
+        console.log('La alerta se ha cerrado');
+    });
+    </code></pre>
+    <p>Este código detecta cuando el evento de cierre de la alerta se activa (es decir, cuando el usuario hace clic en
+        el botón de cerrar o se cierra por otro método), y se ejecuta la función que muestra en la consola el mensaje
+        'La alerta se ha cerrado'.</p>
+
+    <h4>Cerrar la Alerta Programáticamente</h4>
+    <p>También podemos cerrar una alerta de forma programática utilizando el método <code>close()</code> de la instancia
+        de la alerta.</p>
+    <pre><code>
+    // Creamos una instancia de la alerta
+    const myAlertInstance = bootstrap.alert.getOrCreateInstance('#myAlert');
+
+    // Cerramos la alerta programáticamente
+    myAlertInstance.close();
+    </code></pre>
+    <p>El código anterior crea una instancia de la alerta utilizando el método
+        <code>bootstrap.alert.getOrCreateInstance</code>. Luego, utilizamos el método <code>close()</code> para cerrar
+        la alerta automáticamente, sin necesidad de interacción del usuario.</p>
+
+    <!-- Enlace al archivo JS de Bootstrap -->
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // Seleccionamos la alerta con el id 'myAlert'
+        const myAlert = document.getElementById("myAlert");
+
+        // Añadimos un listener para detectar el evento 'close.bs.alert'
+        myAlert.addEventListener('close.bs.alert', event => {
+            console.log('La alerta se ha cerrado');
+        });
+
+        // Creamos una instancia de la alerta
+        const myAlertInstance = bootstrap.alert.getOrCreateInstance('#myAlert');
+
+        // Cerramos la alerta programáticamente
+        myAlertInstance.close();
+    </script>
+    <br>
+    <br>
+    <a href="../index.html" class="btn btn-warning">Volver al inicio</a>
+</body>
+
+</html>

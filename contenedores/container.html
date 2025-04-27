@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos Contenedores</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
+    <style>
+        pre code {
+            font-size: 1rem;
+            font-family: 'Courier New', Courier, monospace;
+            line-height: 1.5;
+        }
+    </style>
+
+</head>
+
+<body>
+    
+    <div class="m-5">
+        <a href="../index.html" class="btn btn-warning">Volver al inicio</a>
+    <br>
+    <br>
+        <h1>Contenedores en Bootstrap 5</h1>
+
+        <hr>
+        <h3>Comparativa</h3>
+    </div>
+    <br>
+    <div class="container bg-primary" style="height: 100px;">
+        <h3>Container (máximo 1140px)</h3>
+    </div>
+    <br>
+    <div class="container-sm bg-primary-subtle" style="height: 100px; margin-top: 10px;">
+        <h3>Container SM (mín. 576px)</h3>
+    </div>
+    <br>
+    <div class="container-md bg-danger" style="height: 100px; margin-top: 10px;">
+        <h3>Container MD (mín. 768px)</h3>
+    </div>
+    <br>
+    <div class="container-lg bg-info" style="height: 100px; margin-top: 10px;">
+        <h3>Container LG (mín. 992px)</h3>
+    </div>
+    <br>
+    <div class="container-xl bg-warning" style="height: 100px; margin-top: 10px;">
+        <h3>Container XL (mín. 1200px)</h3>
+    </div>
+    <br>
+    <div class="container-xxl bg-success" style="height: 100px; margin-top: 10px;">
+        <h3>Container XXL (mín. 1400px)</h3>
+    </div>
+    <br>
+    <div class="container-fluid bg-success-subtle" style="height: 100px; margin-top: 10px;">
+        <h3>Container FLUID (siempre 100%)</h3>
+    </div>
+    <br>
+    <div class="m-5">
+        <!-- Ejemplo de Container -->
+        <h3>Container</h3>
+        <p>El contenedor básico, <code>.container</code>, tiene un ancho máximo fijo dependiendo del tamaño de la
+            pantalla,
+            lo que ayuda a alinear el contenido y mantenerlo centrado.</p>
+        <br>
+        <div class="card text-bg-dark p-3">
+            <!-- Código de ejemplo -->
+            <pre><code>&lt;div class="container bg-primary"&gt;
+    &lt;h3&gt;Container&lt;/h3&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <br><br>
+
+        <!-- Ejemplo de Container SM -->
+        <h3>Container SM</h3>
+        <p>El contenedor <code>.container-sm</code> está diseñado para ajustarse a dispositivos pequeños (pantallas
+            mayores
+            de 576px). Es útil para dispositivos como teléfonos móviles en modo horizontal o pantallas de baja
+            resolución.
+        </p>
+        <br>
+        <div class="card text-bg-dark p-3">
+            <!-- Código de ejemplo -->
+            <pre><code>&lt;div class="container-sm bg-primary-subtle"&gt;
+    &lt;h3&gt;Container SM&lt;/h3&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <br><br>
+
+
+        <!-- Ejemplo de Container MD -->
+        <h3>Container MD</h3>
+        <p>El contenedor <code>.container-md</code> funciona igual que <code>.container</code>, pero está diseñado para
+            ajustarse específicamente a dispositivos medianos en adelante (pantallas mayores de 768px).</p>
+        <br>
+        <div class="card text-bg-dark p-3">
+            <!-- Código de ejemplo -->
+            <pre><code>&lt;div class="container-md bg-danger"&gt;
+    &lt;h3&gt;Container MD&lt;/h3&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <br><br>
+
+        <!-- Ejemplo de Container LG -->
+        <h3>Container LG</h3>
+        <p>El contenedor <code>.container-lg</code> está diseñado para ajustarse a pantallas grandes (mayores de 992px).
+            Se
+            usa cuando quieres que el contenido ocupe más espacio en pantallas grandes.</p>
+        <br>
+        <div class="card text-bg-dark p-3">
+            <!-- Código de ejemplo -->
+            <pre><code>&lt;div class="container-lg bg-info"&gt;
+    &lt;h3&gt;Container LG&lt;/h3&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <br><br>
+
+        <h3>Container XL</h3>
+        <p>El contenedor <code>.container-xl</code> se ajusta a pantallas extra grandes (mayores de 1200px). Se utiliza
+            cuando se desea más espacio para contenido en pantallas muy grandes, como en monitores de escritorio de alta
+            resolución.</p>
+
+        <br>
+        <div class="card text-bg-dark p-3">
+            <!-- Código de ejemplo -->
+            <pre><code>&lt;div class="container-xl bg-warning"&gt;
+    &lt;h3&gt;Container XL&lt;/h3&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <br><br>
+
+        <h3>Container XXL</h3>
+        <p>El contenedor <code>.container-xxl</code> es para pantallas extremadamente grandes (mayores de 1400px). Es
+            útil
+            cuando se necesita un diseño totalmente expansivo para pantallas muy anchas.</p>
+        <br>
+        <div class="card text-bg-dark p-3">
+            <!-- Código de ejemplo -->
+            <pre><code>&lt;div class="container-xxl bg-success"&gt;
+    &lt;h3&gt;Container XXL&lt;/h3&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <br><br>
+
+
+        <!-- Ejemplo de Container Fluid -->
+        <h3>Container FLUID</h3>
+        <p>El contenedor <code>.container-fluid</code> se adapta al 100% del ancho de la pantalla sin restricciones, lo
+            que
+            permite que el contenido ocupe toda la pantalla independientemente de su tamaño.</p>
+        <br>
+        <div class="card text-bg-dark p-3">
+            <!-- Código de ejemplo -->
+            <pre><code>&lt;div class="container-fluid bg-success-subtle"&gt;
+    &lt;h3&gt;Container FLUID&lt;/h3&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+    </div>
+    
+    <br>
+    <br>
+<a href="../index.html" class="btn btn-warning">Volver al inicio</a>
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -25,22 +25,22 @@
         <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <!-- Columna con la tarjeta -->
-                <div class="col-12 col-md-8 col-lg-6">
+                <div class="col-12 col-md-10 col-lg-8">
                     <div class="card">
                         <div class="card-body p-4">
                             <!-- Contenido del perfil -->
-                            <div class="d-flex">
+                            <div class="row d-flex flex-column flex-md-row align-items-center">
                                 <!-- Imagen de perfil -->
-                                <div class="flex-shrink-0 text-center mb-3 mb-md-0">
-                                    <img src="../images/avatar.jpg" alt="Avatar" class="img-fluid rounded" style="max-width: 140px;">
+                                <div class="col-12 col-md-4 text-center mb-3 mb-md-0">
+                                    <img src="../images/avatar.jpg" alt="Avatar" class="img-fluid rounded" style="max-width: 180px;">
                                 </div>
                                 <!-- Información del usuario -->
-                                <div class="flex-grow-1 ms-3">
+                                <div class="col-12 col-md-8">
                                     <h5 class="mb-1">Ana Pérez</h5>
                                     <p class="mb-2 pb-1">Software Engineer</p>
                                     <!-- Estadísticas de usuario -->
-                                    <div class="d-flex justify-content-center rounded-3 p-2 mb-2" style="background-color: #EEE;">
-                                        <div>
+                                    <div class="d-flex flex-column flex-md-row justify-content-center rounded-3 p-2 mb-2" style="background-color: #EEE;">
+                                        <div class="px-3">
                                             <p class="small text-body-secondary mb-1">Proyectos</p>
                                             <p class="mb-0">15</p>
                                         </div>
@@ -48,7 +48,7 @@
                                             <p class="small text-body-secondary mb-1">Certificados</p>
                                             <p class="mb-0">4</p>
                                         </div>
-                                        <div>
+                                        <div class="px-3">
                                             <p class="small text-body-secondary mb-1">Equipos</p>
                                             <p class="mb-0">2</p>
                                         </div>
@@ -83,56 +83,130 @@
     <h3>HTML de la tarjeta de perfil</h3>
     <br>
     <div class="card text-bg-dark p-3">
-        <pre><code class="language-html">&lt;section class="vh-100"&gt; &lt;!-- Sección principal, ocupa el 100% de la altura de la ventana --&gt;
-        &lt;div class="container py-5 h-100"&gt; &lt;!-- Contenedor que centra el contenido, con relleno y altura 100% --&gt;
-            &lt;div class="row d-flex justify-content-center align-items-center h-100"&gt; &lt;!-- Fila para alinear el contenido en el centro --&gt;
-                &lt;div class="col-12 col-md-8 col-lg-6"&gt; &lt;!-- Columna con un diseño responsive: ocupa 9 columnas en md, 7 en lg, y 5 en xl --&gt;
-                    &lt;div class="card"&gt; &lt;!-- Tarjeta que contiene la información --&gt;
-                        &lt;div class="card-body p-4"&gt; &lt;!-- Cuerpo de la tarjeta con padding de 4 --&gt;
-                            &lt;div class="d-flex"&gt; &lt;!-- Flexbox para organizar los elementos en fila --&gt;
-                                &lt;div class="flex-shrink-0 text-center mb-3 mb-md-0"&gt; &lt;!-- Este div contiene la imagen y se redimensiona --&gt;
-                                    &lt;img src="../images/avatar.jpg" alt="Avatar" class="img-fluid rounded" style="max-width: 140px;"&gt; &lt;!-- Imagen de perfil con un tamaño responsive --&gt;
-                                &lt;/div&gt;
-                                &lt;div class="flex-grow-1 ms-3"&gt; &lt;!-- Este div ocupa el resto del espacio disponible, con margen a la izquierda --&gt;
-                                    &lt;h5 class="mb-1"&gt;Ana Pérez&lt;/h5&gt; &lt;!-- Nombre de la persona --&gt;
-                                    &lt;p class="mb-2 pb-1"&gt;Software Engineer&lt;/p&gt; &lt;!-- Puesto de trabajo --&gt;
+        <pre><code class="language-html">&lt;!-- Sección principal del perfil de usuario --&gt;
+            &lt;section&gt;
+                &lt;!-- .container: crea un contenedor central con márgenes automáticos y padding horizontal.
+                     py-5: padding vertical grande (arriba y abajo) para separar visualmente la sección.
+                     h-100: ocupa el 100% de la altura disponible. --&gt;
+                &lt;div class="container py-5 h-100"&gt;
+                    &lt;!-- .row: define una fila en el sistema de grid de Bootstrap. 
+                         d-flex: convierte la fila en un contenedor flexbox, permitiendo alinear hijos fácilmente.
+                         justify-content-center: centra horizontalmente el contenido dentro de la fila usando flexbox.
+                         align-items-center: centra verticalmente los elementos hijos en la fila.
+                         h-100: altura al 100%, útil para centrar verticalmente en la pantalla. --&gt;
+                    &lt;div class="row d-flex justify-content-center align-items-center h-100"&gt;
+                        
+                        &lt;!-- .col-12: columna que ocupa todo el ancho en pantallas pequeñas.
+                             .col-md-10: ocupa 10/12 columnas en pantallas medianas.
+                             .col-lg-8: ocupa 8/12 en pantallas grandes.
+                             Esto hace el diseño responsivo y centrado. --&gt;
+                        &lt;div class="col-12 col-md-10 col-lg-8"&gt;
+                            &lt;!-- .card: componente visual de Bootstrap que agrupa información en una caja con sombra. --&gt;
+                            &lt;div class="card"&gt;
+                                &lt;!-- .card-body: padding interno para separar el contenido del borde de la tarjeta.
+                                     p-4: padding uniforme grande en todos los lados. --&gt;
+                                &lt;div class="card-body p-4"&gt;
                                     
-                                    &lt;!-- Estadísticas del perfil en un fondo gris --&gt;
-                                    &lt;div class="d-flex justify-content-center rounded-3 p-2 mb-2" style="background-color: #EEE;"&gt;
-                                        &lt;div&gt; &lt;!-- Primer bloque de estadísticas --&gt;
-                                            &lt;p class="small text-body-secondary mb-1"&gt;Proyectos&lt;/p&gt; &lt;!-- Título de la estadística --&gt;
-                                            &lt;p class="mb-0"&gt;15&lt;/p&gt; &lt;!-- Valor de la estadística --&gt;
+                                    &lt;!-- .row: otra fila interna para organizar el contenido del perfil.
+                                         d-flex: convierte la fila en flexbox.
+                                         flex-column: dirección vertical por defecto (en móviles).
+                                         flex-md-row: cambia a dirección horizontal en pantallas medianas en adelante.
+                                         align-items-center: centra verticalmente los elementos hijos dentro del flexbox. 
+                                         Esto permite que la imagen y los datos estén uno encima del otro en móvil, y en fila en escritorio. --&gt;
+                                    &lt;div class="row d-flex flex-column flex-md-row align-items-center"&gt;
+                                        
+                                        &lt;!-- Columna para la imagen de perfil.
+                                             .col-12: ocupa todo el ancho en móvil.
+                                             .col-md-4: ocupa 4/12 columnas en pantallas medianas o más grandes.
+                                             text-center: centra la imagen horizontalmente.
+                                             mb-3: margen inferior en móvil.
+                                             mb-md-0: elimina ese margen en escritorio para alineación horizontal. --&gt;
+                                        &lt;div class="col-12 col-md-4 text-center mb-3 mb-md-0"&gt;
+                                            &lt;!-- Imagen de perfil, responsiva (img-fluid), con bordes redondeados (rounded).
+                                                 style="max-width: 180px;": limita el tamaño máximo de la imagen. --&gt;
+                                            &lt;img src="../images/avatar.jpg" alt="Avatar" class="img-fluid rounded" style="max-width: 180px;"&gt;
                                         &lt;/div&gt;
-                                        &lt;div class="px-3"&gt; &lt;!-- Segundo bloque de estadísticas con padding horizontal --&gt;
-                                            &lt;p class="small text-body-secondary mb-1"&gt;Certificados&lt;/p&gt;
-                                            &lt;p class="mb-0"&gt;4&lt;/p&gt;
-                                        &lt;/div&gt;
-                                        &lt;div&gt; &lt;!-- Tercer bloque de estadísticas --&gt;
-                                            &lt;p class="small text-body-secondary mb-1"&gt;Equipos&lt;/p&gt;
-                                            &lt;p class="mb-0"&gt;2&lt;/p&gt;
+                                        
+                                        &lt;!-- Columna para la información del usuario.
+                                             .col-12: ocupa todo el ancho en móvil.
+                                             .col-md-8: ocupa 8/12 columnas en escritorio. --&gt;
+                                        &lt;div class="col-12 col-md-8"&gt;
+                                            &lt;!-- Nombre del usuario --&gt;
+                                            &lt;h5 class="mb-1"&gt;Ana Pérez&lt;/h5&gt;
+                                            &lt;!-- Profesión o puesto --&gt;
+                                            &lt;p class="mb-2 pb-1"&gt;Software Engineer&lt;/p&gt;
+                                            
+                                            &lt;!-- Sección de estadísticas del usuario.
+                                                 d-flex: flexbox para alinear los bloques de estadísticas.
+                                                 flex-column: apila verticalmente en móvil.
+                                                 flex-md-row: apila en fila en escritorio.
+                                                 justify-content-center: centra horizontalmente los bloques.
+                                                 rounded-3: bordes redondeados.
+                                                 p-2 mb-2: padding y margen inferior.
+                                                 style="background-color: #EEE;": fondo gris claro.
+                                                 Así, las estadísticas se ven apiladas en móvil y en línea en escritorio. --&gt;
+                                            &lt;div class="d-flex flex-column flex-md-row justify-content-center rounded-3 p-2 mb-2" style="background-color: #EEE;"&gt;
+                                                &lt;!-- Estadística: Proyectos --&gt;
+                                                &lt;div class="px-3"&gt;
+                                                    &lt;!-- Título de la estadística --&gt;
+                                                    &lt;p class="small text-body-secondary mb-1"&gt;Proyectos&lt;/p&gt;
+                                                    &lt;!-- Valor de la estadística --&gt;
+                                                    &lt;p class="mb-0"&gt;15&lt;/p&gt;
+                                                &lt;/div&gt;
+                                                &lt;!-- Estadística: Certificados --&gt;
+                                                &lt;div class="px-3"&gt;
+                                                    &lt;p class="small text-body-secondary mb-1"&gt;Certificados&lt;/p&gt;
+                                                    &lt;p class="mb-0"&gt;4&lt;/p&gt;
+                                                &lt;/div&gt;
+                                                &lt;!-- Estadística: Equipos --&gt;
+                                                &lt;div class="px-3"&gt;
+                                                    &lt;p class="small text-body-secondary mb-1"&gt;Equipos&lt;/p&gt;
+                                                    &lt;p class="mb-0"&gt;2&lt;/p&gt;
+                                                &lt;/div&gt;
+                                            &lt;/div&gt;
+                                            
+                                            &lt;!-- Botones de acción: Mensaje y Seguir.
+                                                 d-flex: los botones se muestran en una fila flexible.
+                                                 flex-grow-1: ambos botones crecen para ocupar el mismo espacio disponible.
+                                                 position-relative: permite posicionar el badge de notificaciones de forma absoluta dentro del botón. --&gt;
+                                            &lt;div class="d-flex"&gt;
+                                                &lt;!-- Botón para enviar mensaje, con badge de notificaciones.
+                                                     btn-outline-primary: estilo de botón.
+                                                     me-1: margen a la derecha.
+                                                     flex-grow-1: el botón crece para ocupar espacio.
+                                                     position-relative: necesario para posicionar el badge. --&gt;
+                                                &lt;button type="button" class="btn btn-outline-primary me-1 flex-grow-1 position-relative"&gt;
+                                                    Message
+                                                    &lt;!-- Badge: burbuja de notificación roja con número de mensajes.
+                                                         position-absolute: posiciona el badge de forma absoluta dentro del botón.
+                                                         top-0 start-0 translate-middle: lo coloca en la esquina superior izquierda, desplazado al centro del borde.
+                                                         badge rounded-pill bg-danger: estilos visuales del badge. --&gt;
+                                                    &lt;span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-danger"&gt;
+                                                        10
+                                                    &lt;/span&gt;
+                                                &lt;/button&gt;
+                                                &lt;!-- Botón para seguir al usuario.
+                                                     flex-grow-1: ocupa el mismo espacio que el anterior.
+                                                     btn-primary: botón azul principal. --&gt;
+                                                &lt;button class="flex-grow-1 btn btn-primary"&gt;
+                                                    Follow
+                                                &lt;/button&gt;
+                                            &lt;/div&gt;
                                         &lt;/div&gt;
                                     &lt;/div&gt;
-    
-                                    &lt;!-- Fila de botones: uno para enviar mensaje y otro para seguir --&gt;
-                                    &lt;div class="d-flex"&gt;
-                                        &lt;button type="button" class="btn btn-outline-primary me-1 flex-grow-1 position-relative"&gt;
-                                            Message &lt;!-- Botón de mensaje --&gt;
-                                            &lt;span class="position-absolute top-0 start-0 translate-middle badge rounded-pill bg-danger"&gt;
-                                                10 &lt;!-- Badge que indica el número de mensajes --&gt;
-                                            &lt;/span&gt;
-                                        &lt;/button&gt;
-                                        &lt;button class="flex-grow-1 btn btn-primary"&gt; &lt;!-- Botón de seguir --&gt;
-                                            Follow
-                                        &lt;/button&gt;
-                                    &lt;/div&gt;
+                                    &lt;!-- Fin de la fila interna de flexbox --&gt;
                                 &lt;/div&gt;
                             &lt;/div&gt;
+                            &lt;!-- Fin de la tarjeta --&gt;
                         &lt;/div&gt;
+                        &lt;!-- Fin de la columna principal --&gt;
                     &lt;/div&gt;
+                    &lt;!-- Fin de la fila --&gt;
                 &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/section&gt;</code></pre>
+                &lt;!-- Fin del contenedor --&gt;
+            &lt;/section&gt;
+            &lt;!-- Fin de la sección del perfil --&gt;
+            </code></pre>
     </div>
     
     <br>
